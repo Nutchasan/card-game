@@ -19,9 +19,17 @@ export default class WordCard extends Component {
         super(props)
         this.state = prepareStateFromWord(this.props.value)
     }
+   
 
     activationHandler = (c) => {
         let guess = [...this.state.guess, c]
+
+        console.log("guess : " + guess.length)
+        console.log("guess : " + guess)
+        console.log("chars : " + this.state.chars)
+        console.log("word : " + this.state.word.length)
+        console.log("word : " + this.state.word)
+
         this.setState({guess})
         if(guess.length == this.state.chars.length){
             if(guess.join('').toString() == this.state.word){
