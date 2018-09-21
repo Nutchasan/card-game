@@ -31,7 +31,7 @@ export default class WordCard extends Component {
         this.setState({guess})
         
         if(guess.length == this.state.chars.length){
-            if(guess.join('').toString() == this.state.word){
+            if(guess.join('').toString() == this.state.chars){
                 console.log("YES!!!")
                 this.setState({guess: [], completed: true})
             }else{
