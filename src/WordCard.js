@@ -24,14 +24,14 @@ export default class WordCard extends Component {
         let guess = [...this.state.guess, c]
 
         console.log("guess : " + guess.join('').toString())
-        console.log("chars : " + this.state.chars)
+        console.log("chars : " + this.state.chars.join('').toString())
         console.log("word : " + this.state.word)
         
 
         this.setState({guess})
         
         if(guess.length == this.state.chars.length){
-            if(guess.join('').toString() == this.state.chars){
+            if(guess.join('').toString() == this.state.chars.join('').toString()){
                 console.log("YES!!!")
                 this.setState({guess: [], completed: true})
             }else{
