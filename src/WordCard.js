@@ -44,10 +44,10 @@ export default class WordCard extends Component {
 
     render() {
         return (
-            <div>
+            <div className="App">
                 { Array.from(this.props.value).map((c, i) => <CharacterCard value={c} key={i} attempt={this.state.attempt} activationHandler={this.activationHandler} />) }
 
-                {this.state.completed? 'true' : 'false'}
+                <h1 class="center">{this.state.completed? 'true' : 'false'}</h1>
             </div>
         );
     }
